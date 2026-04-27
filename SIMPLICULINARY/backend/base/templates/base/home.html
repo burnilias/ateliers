@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Simpliculinary{% endblock %}
+
+{% block content %}
+<style>
+@keyframes rainbow-move {
+    0% {
+        background-position: 0% 50%;
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        background-position: 100% 50%;
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+}
+
+.rainbow-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    animation: rainbow-move 6s linear infinite;
+}
+</style>
+
+<div class="container mt-5">
+    <h1>Bienvenue sur Simpliculinary</h1>
+    <div class="mt-3 overflow-hidden" style="width: 100%;">
+        <span class="rainbow-text">MAR7BAAAAAAAAAAAAA</span>
+    </div>
+</div>
+{% endblock %}
